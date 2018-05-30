@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
   # /api/categories/id   donde id = un id de categoría existente en la base de datos
   def show
     @category = Category.find(params[:id])
-    render json:@category
+    render json:@category, include: '**' #profundidad de json 2, es decir, se pueden hacer más referencias
   end
 
   # post
