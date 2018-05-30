@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
   end
 
   # put
-  # edita una nueva, recibe como parámetro el id de la categoría y los nuevos nombre, descripción y enlace a una imagen
+  # edita una categoría, recibe como parámetro el id de la categoría y los nuevos nombre, descripción y enlace a una imagen
   # /api/categories/id?name=&description=&photo=
   def update
     @category = Category.find(params[:id])

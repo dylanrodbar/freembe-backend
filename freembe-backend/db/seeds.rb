@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 5.times do
-  category = Category.create({name: Faker::Name.name, description: Faker::Name.name, photo: "https://res.cloudinary.com/poppycloud/image/upload/v1526809567/z5mgz0dcea3tv5qe1fln.png"})
+  subcategory = Subcategory.create({name: Faker::Name.name, description: Faker::Name.name, photo: "https://res.cloudinary.com/poppycloud/image/upload/v1526809567/z5mgz0dcea3tv5qe1fln.png"})
 end
