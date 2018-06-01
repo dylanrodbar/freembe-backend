@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   # /api/categories/
   def index
     @categories = Category.order('created_at DESC')
-    render json:@categories
+    render json:@categories, include: '**'
   end
 
   # get
