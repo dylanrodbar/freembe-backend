@@ -26,12 +26,18 @@ class UsersController < ApplicationController
     render json:@user
   end
 
+  # delete
+  # elimina un usuario de la base de datos, dado su id
+  # /api/users/id donde id es el identificador del usuario
   def destroy
     @user = User.find(params[:id])
     @user.destroy
     render json:@user
   end
 
+  # put
+  # edita un usuario de la base de datos, dado su id
+  # /api/users/id?name=&email=&password=&photo=& donde id es el identificador del usuario
   def update
     @user = User.find(params[:id])
     @user.name = params[:name]
