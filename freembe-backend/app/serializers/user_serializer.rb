@@ -11,5 +11,10 @@ class UserSerializer < ActiveModel::Serializer
     attributes :id, :user_id, :telephone
   end
 
+  has_many :announcements
+  class AnnouncementSerializer < ActiveModel::Serializer
+    attributes :id, :title, :description, :price, :photo, :latitude, :longitude, :subcategory, :place
+  end
+
 
 end
