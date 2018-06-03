@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :telephones
     resources :emails
     resources :announcements
+    resources :favorites
+    resources :comments
 
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
