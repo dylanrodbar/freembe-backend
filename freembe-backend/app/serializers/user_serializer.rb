@@ -16,5 +16,10 @@ class UserSerializer < ActiveModel::Serializer
     attributes :id, :title, :description, :price, :photo, :latitude, :longitude, :subcategory, :place
   end
 
+  has_many :favorites
+  class FavoriteSerializer < ActiveModel::Serializer
+    attributes :id, :announcement
+  end
+
 
 end
