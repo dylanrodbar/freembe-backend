@@ -42,7 +42,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.name = params[:name]
     @user.email = params[:email]
-    @user.password = params[:password]
+    @user.password_digest = params[:password_digest]
     @user.photo = params[:photo]
   end
 end
