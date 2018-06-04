@@ -11,5 +11,16 @@ class AuthenticationController < ApplicationController
       render json: { error: command.errors }, status: :unauthorized
     end
   end
+
+  def authenticateadmin
+    command = AuthenticateAdmin.call(params[:email], params[:password])
+
+
+    if command.success?
+      render json: { auth_token: command.result[0], email: command.result[1] }
+    else
+      render json: { error: command.errors }, status: :unauthorized
+    end
+  end
 end
 end

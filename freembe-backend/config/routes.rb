@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :announcements
     resources :favorites
     resources :comments
+    resources :admins
     post 'authenticate', to: 'authentication#authenticate'
 
   end
